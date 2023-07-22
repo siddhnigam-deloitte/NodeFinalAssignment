@@ -21,6 +21,18 @@ class HackathonController{
     SearchByTechStack(req,res){
         return hackathonServices.SearchbyTechStack(req,res)
     }
+    listAllParticipants(req,res)
+    {    
+        return hackathonServices.ListallParticipants(req,res)
+    }
+    DeleteHackathon(req,res)
+    {
+        return hackathonServices.DeleteHackathon(req,res)
+    }
+    UpdateHackathon(req,res)
+    {
+        return hackathonServices.updateHackathon(req,res)
+    }
 }
 
 export default HackathonController;

@@ -21,7 +21,11 @@ EmployeeRouter.get("/view",verifyAuthentication,(req,res)=>{
 
 EmployeeRouter.put("/enroll/:id",verifyAuthentication,(req,res)=>{
     employeecontroller.enrollhackathon(req,res)
-
 })
+
+EmployeeRouter.get("/ListAllHackathon",verifyAuthentication,(req,res)=>{
+    employeecontroller.listallParticipatedHackathon(req,res)
+})
+
 
 export default EmployeeRouter;

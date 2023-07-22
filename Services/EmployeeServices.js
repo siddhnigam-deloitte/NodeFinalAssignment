@@ -3,6 +3,7 @@ import Employee from "../Models/Employee.js";
 import JwtSign from "../Jwt/JwtSign.js";
 import sequelize from "../Db/Db.js";
 import Hackathon from "../Models/Hackathon.js";
+import EmployeeHackathon from "../Models/EmployeeHackathon.js";
 
 
 class EmployeeServices{
@@ -71,6 +72,20 @@ class EmployeeServices{
         }
 
         
+    }
+
+    async ListallParticipatedHackathons(req,res)
+    {
+        const emailid=req.payload.EmailId;
+        const emp=await Employee.findOne({where:{EmailId:emailid}})
+        const all=await EmployeeHackathon.findAll({where:{EmployeeEmployeeId:emp.EmployeeId}})
+        const arr=[];
+        for (const x of all) {
+            const k = await Hackathon.findOne({ where: { HackathonId: x.dataValues.HackathonHackathonId } });
+            arr.push(k);
+          }
+        console.log(arr)
+        res.send(arr)
     }
 }
 export default EmployeeServices;

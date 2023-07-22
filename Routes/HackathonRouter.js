@@ -18,4 +18,14 @@ HackathonRouter.get("/SearchbyCompanyName",verifyAuthentication,(req,res)=>{
 HackathonRouter.get("/SearchbyTechStack",verifyAuthentication,(req,res)=>{
     hackathonController.SearchByTechStack(req,res);
 })
+HackathonRouter.get("/ListallParticipants/:id",(req,res)=>{
+    hackathonController.listAllParticipants(req,res);
+})
+HackathonRouter.delete("/delete/:id",(req,res)=>{
+    hackathonController.DeleteHackathon(req,res);
+})
+HackathonRouter.put("/update/:id",(req,res)=>{
+    hackathonController.UpdateHackathon(req,res)
+})
+
 export default HackathonRouter;

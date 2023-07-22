@@ -17,5 +17,10 @@ class EmployeeController{
     {
       return employeeServices.enrollhackathon(req,res)
     }
+    listallParticipatedHackathon(req,res)
+    {
+        return employeeServices.ListallParticipatedHackathons(req,res)
+    }
+
 }
  export default EmployeeController
