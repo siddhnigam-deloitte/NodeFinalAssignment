@@ -52,7 +52,7 @@ class EmployeeServices{
         res.send(array)
     }
 
-    async enrollhachathon(req,res)
+    async enrollhackathon(req,res)
     {
         const id=req.params.id;
         const today=new Date();

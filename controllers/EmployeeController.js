@@ -15,7 +15,7 @@ class EmployeeController{
     }
     enrollhackathon(req,res)
     {
-      return employeeServices.enrollhachathon(req,res)
+      return employeeServices.enrollhackathon(req,res)
     }
 }
  export default EmployeeController

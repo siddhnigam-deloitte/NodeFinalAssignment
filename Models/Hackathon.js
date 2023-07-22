@@ -43,6 +43,10 @@ const Hackathon = sequelize.define('Hackathon', {
       MinimumReqExp: {
         type: DataTypes.INTEGER,
         allowNull: false
+      },
+      TechStack: {
+        type: DataTypes.STRING,
+        allowNull: false
       }
   }, {
     // Other model options go here
